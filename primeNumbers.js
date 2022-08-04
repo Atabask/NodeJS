@@ -27,15 +27,15 @@ if (rangeNumbers === null && rangeNumbers === " ") {
 
         
 
-        // if ( i && arr[arr.length - 1] === colors.red ) {
-        //     arr.push( colors.green(i) )
-        // } else if ( arr[arr.length - 1] === colors.green ) {                
-        //     arr.push( colors.yellow(i) )
-        // } else if ( arr[arr.length - 1] === colors.yellow ) {
-        //     arr.push( colors.red(i) )
-        // }
+        if ( i === 2 || arr[arr.length - 1] === colors.red ) {
+            arr.push( colors.green(i) )
+        } else if ( arr[arr.length - 1] === colors.green(i) ) {                
+            arr.push( colors.yellow(i) )
+        } else if ( arr[arr.length - 1] === colors.yellow(i) ) {
+            arr.push( colors.red(i) )
+        }
 
-        arr.push(i)
+        // arr.push(i)
         // const lastArr = arr[arr.length - 1] 
         // console.log("lastArr",lastArr)
 
@@ -48,12 +48,15 @@ if (rangeNumbers === null && rangeNumbers === " ") {
     }
 }
 
-
 arr.forEach((item) => {
-    if( item === 2) {
-        console.log(colors.green(item))
-    } else if( arr[arr.length - 1] === colors.green.item ) {
-        console.log(colors.yellow(item))
-    }
+    console.log(item)
 })
+
+// arr.forEach((item) => {
+//     if( item === 2) {
+//         console.log(colors.green(item))
+//     } else if( arr[arr.length - 1] === colors.green.item ) {
+//         console.log(colors.yellow(item))
+//     }
+// })
 
