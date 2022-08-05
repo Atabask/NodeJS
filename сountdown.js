@@ -1,11 +1,9 @@
 var time = process.argv.slice(2) 
 
 
-
-
 let timer = setInterval( function() {
 
-    let timeMinut = time * 60
+    let timeMinut = time 
 
     let seconds = timeMinut%60 
     let minutes = timeMinut/60%60 

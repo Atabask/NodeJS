@@ -1,8 +1,8 @@
 import readline from "readline"
 import colors from "colors"
-// import ansi from "ansi";
-import beep from "beepbeep"
-// import {Howl, Howler} from 'howler';
+import beep from "beepbeep"         // Не отрабатывает
+// import ansi from "ansi";         //отсюда beep тоже не отрабатывает         
+// import {Howl, Howler} from 'howler';         //Не уверен, что она работает с терминалами, но решил попробовать, не отрабатывает
 
 
 
@@ -12,10 +12,10 @@ const rl = readline.createInterface({
     output: process.stdout
 })
 
-// const cursor = ansi(process.stdout)
+// const cursor = ansi(process.stdout)         
 
 // const sound = new Howl({
-//     src: "music/audio.mp3"
+//     src: "music/audio.mp3"      
 // })
 
 

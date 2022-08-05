@@ -6,10 +6,17 @@ const rangeNumbers = process.argv.slice(2)
 
 const arr = [];
 
+colors.setTheme({
+    green: 'green',
+    yellow: 'yellow',
+    red: 'red'
+})
 
-if (rangeNumbers === null && rangeNumbers === " ") {
 
-    console.log(colors.red("Error, enter a number"))
+
+if (rangeNumbers === null || rangeNumbers === undefined) { 
+
+    console.log(colors.red('Error, enter a number'))          // не отрабатывает условие, не понимаю почему 
 
 } else {
 
@@ -25,38 +32,38 @@ if (rangeNumbers === null && rangeNumbers === " ") {
 
         }
 
-        
 
-        if ( i === 2 || arr[arr.length - 1] === colors.red ) {
-            arr.push( colors.green(i) )
-        } else if ( arr[arr.length - 1] === colors.green(i) ) {                
-            arr.push( colors.yellow(i) )
-        } else if ( arr[arr.length - 1] === colors.yellow(i) ) {
-            arr.push( colors.red(i) )
-        }
+        arr.push(i)
 
-        // arr.push(i)
-        // const lastArr = arr[arr.length - 1] 
-        // console.log("lastArr",lastArr)
+        // if (i === 2 || arr[arr.length - 1] === colors.red(i)) {
+        //     arr.push(colors.green(i))
+            
+        // } else if (arr[arr.length - 1] === colors.green(i)) {           это было изначально, но добавляло только 2
+        //     arr.push(colors.yellow(i))
+
+        // } else if (arr[arr.length - 1] === colors.yellow(i)) {
+        //     arr.push(colors.red(i))
+
+        // }
 
 
-        // arr.push(colors.green(i))
-        // arr.push(colors.yellow(i))
-        // arr.push(colors.red(i))
 
 
     }
 }
 
-arr.forEach((item) => {
-    console.log(item)
-})
+for( let i = 0; i< arr.length; i+=3) {
+    console.log(`${arr[i]}`.green)
+    if(arr[ i + 1 ]) {
+        console.log(`${arr[i + 1]}`.yellow)   // полностью списал
+    } if (arr[ i + 2 ]) {
+        console.log(`${arr[i + 2]}`.red)
+    }
+}
 
 // arr.forEach((item) => {
-//     if( item === 2) {
-//         console.log(colors.green(item))
-//     } else if( arr[arr.length - 1] === colors.green.item ) {
-//         console.log(colors.yellow(item))
-//     }
+//     console.log(item)                
 // })
+
+
 

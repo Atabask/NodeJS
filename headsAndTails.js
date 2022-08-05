@@ -12,9 +12,9 @@ const rl = readline.createInterface({
 
 rl.on('line', (input) => {
 
-    console.log('1 or 2?')
+    console.log('1 or 2? Press 3 to close')
 
-    if (input === "Close") {
+    if (input === "3") {
         rl.close();
     } else if (choice[Math.floor(Math.random() * choice.length)] === input) {
         console.log(colors.green("Win"))
