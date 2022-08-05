@@ -14,7 +14,7 @@ let timer = setInterval( function() {
         console.log("Time is out")
         
     } else {
-        console.log(Math.trunc(hour),"hrs", Math.trunc(minutes),"min", Math.trunc(seconds),"sec")
+        console.log( Math.trunc(hour),"hrs", Math.trunc(minutes),"min", Math.trunc(seconds),"sec" )
     }
     --time;
 }, 1000)
