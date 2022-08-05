@@ -19,6 +19,7 @@ const rl = readline.createInterface({
 // })
 
 
+console.log( "Enter messages :)" )
 
 rl.on('line', (input) => {
 
@@ -34,7 +35,7 @@ rl.on('line', (input) => {
         
         
         // sound.play(),
-        // Howler.volume(1);
+        // Howler.volume(1);                    Оповещение в терминале включил, оно отображается, но звука нет
     }
 
     

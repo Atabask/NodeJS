@@ -12,9 +12,7 @@ colors.setTheme({
     red: 'red'
 })
 
-
-
-if (rangeNumbers === null || rangeNumbers === undefined) { 
+if (rangeNumbers === " ") { 
 
     console.log(colors.red('Error, enter a number'))          // не отрабатывает условие, не понимаю почему 
 
