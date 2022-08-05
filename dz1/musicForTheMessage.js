@@ -2,7 +2,7 @@ import readline from "readline"
 import colors from "colors"
 import beep from "beepbeep"         // Не отрабатывает
 // import ansi from "ansi";         //отсюда beep тоже не отрабатывает         
-// import {Howl, Howler} from 'howler';         //Не уверен, что она работает с терминалами, но решил попробовать, не отрабатывает
+import {Howl, Howler} from 'howler';         //Не уверен, что она работает с терминалами, но решил попробовать, не отрабатывает
 
 
 
@@ -14,9 +14,9 @@ const rl = readline.createInterface({
 
 // const cursor = ansi(process.stdout)         
 
-// const sound = new Howl({
-//     src: "music/audio.mp3"      
-// })
+const sound = new Howl({
+    src: "music/audio.mp3"      
+})
 
 
 console.log( "Enter messages :)" )
@@ -34,8 +34,8 @@ rl.on('line', (input) => {
         
         
         
-        // sound.play(),
-        // Howler.volume(1);                    Оповещение в терминале включил, оно отображается, но звука нет
+        sound.play(),
+        Howler.volume(1);                  //  Оповещение в терминале включил, оно отображается, но звука нет
     }
 
     
